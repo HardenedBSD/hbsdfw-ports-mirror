@@ -1,6 +1,6 @@
 PORTNAME=	pam_opnsense
 PORTVERSION=	19.1.3
-CATEGORIES=	sysutils
+CATEGORIES=	opnsense sysutils
 
 MAINTAINER=	ad@opnsense.org
 COMMENT=	OPNsense shared authentication system using PAM

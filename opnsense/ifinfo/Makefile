@@ -1,6 +1,6 @@
 PORTNAME=	ifinfo
 PORTVERSION=	13.0
-CATEGORIES=	sysutils
+CATEGORIES=	opnsense sysutils
 DISTFILES=
 
 MAINTAINER=	franco@opnsense.org

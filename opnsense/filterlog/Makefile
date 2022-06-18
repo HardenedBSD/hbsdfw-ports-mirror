@@ -1,6 +1,6 @@
 PORTNAME=	filterlog
 PORTVERSION=	0.6
-CATEGORIES=	sysutils
+CATEGORIES=	opnsense sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# none
 EXTRACT_ONLY=	# empty

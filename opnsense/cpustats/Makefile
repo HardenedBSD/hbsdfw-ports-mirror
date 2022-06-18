@@ -1,6 +1,6 @@
 PORTNAME=	cpustats
 PORTVERSION=	0.1
-CATEGORIES=	sysutils
+CATEGORIES=	opnsense sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# none
 EXTRACT_ONLY=	# empty

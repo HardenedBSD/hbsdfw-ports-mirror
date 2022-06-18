@@ -1,6 +1,6 @@
 PORTNAME=	phpseclib
 DISTVERSION=	2.0.37
-CATEGORIES=	security devel
+CATEGORIES=	opnsense security devel
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
 MAINTAINER=	franco@opnsense.org

@@ -1,6 +1,6 @@
 PORTNAME=	lang
 PORTVERSION=	21.7.8
-CATEGORIES=	sysutils
+CATEGORIES=	opnsense sysutils
 PKGNAMEPREFIX=	${GH_ACCOUNT}-
 
 MAINTAINER=	franco@opnsense.org
