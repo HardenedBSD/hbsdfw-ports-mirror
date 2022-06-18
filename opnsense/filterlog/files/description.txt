@@ -1,0 +1,41 @@
+Packetfilter
+============
+
+rulenr, subrulenr, anchorname, label | "0", interface, reason, action, dir
+
+Label only set when system returned all labels correctly, otherwise "0".
+
+IPv4
+====
+
+[Packetfilter], ipversion, tos, ecn, ttl, id, offset, flags, protonum, protoname, length, src, dst
+
+The protonum/protoname order is reversed compared to IPv6.
+
+IPv6
+====
+
+[Packetfilter], ipversion, class, flow, hoplimit, protoname, protonum, length, src, dst
+
+The protonum/protoname order is reversed compared to IPv4.
+
+UDP
+===
+
+[IPv4 | IPv6], srcport, dstport, datalen
+
+TCP
+===
+
+[IPv4 | IPv6], srcport, dstport, datalen, flags, seq, ack, window, urg, options
+
+CARP
+====
+
+[IPv4 | IPv6], type, ttl | hoplimit, vhid, version, advskew, advbase
+
+Caveats
+=======
+
+Partial data may be returned by each component depending on forged packet
+integrity, snap length and other factors, e.g. hardware corruption of packages.

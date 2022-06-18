@@ -2664,6 +2664,7 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 
 # HardenedBSD-related categories
 VALID_CATEGORIES+=	hardenedbsd
+VALID_CATEGORIES+=	opnsense
 
 check-categories:
 .      for cat in ${CATEGORIES}
