@@ -34,7 +34,7 @@ RUN_DEPENDS=	beep>=0:audio/beep \
 		isc-dhcp44-relay>=0:net/isc-dhcp44-relay \
 		isc-dhcp44-server>=0:net/isc-dhcp44-server \
 		jq>=0:textproc/jq \
-		lang>=0:opnsense/lang \
+		opnsense-lang>=0:opnsense/lang \
 		lighttpd>=0:www/lighttpd \
 		monit>=0:sysutils/monit \
 		mpd5>=0:net/mpd5 \
@@ -42,7 +42,7 @@ RUN_DEPENDS=	beep>=0:audio/beep \
 		ntp>=0:net/ntp \
 		openssh-portable>=0:security/openssh-portable \
 		openvpn>=0:security/openvpn \
-		update>=0:opnsense/update \
+		opnsense-update>=0:opnsense/update \
 		pam_opnsense>=0:opnsense/pam_opnsense \
 		pftop>=0:sysutils/pftop \
 		radvd>=0:net/radvd \
