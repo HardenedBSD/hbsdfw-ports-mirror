@@ -2,7 +2,7 @@
 
 PORTNAME=	hbsdfw-core
 PORTVERSION=	1.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	hardenedbsd
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -53,6 +53,7 @@ RUN_DEPENDS=	beep>=0:audio/beep \
 		smartmontools>=0:sysutils/smartmontools \
 		squid>=0:www/squid \
 		sudo>=0:security/sudo \
+		suricata>=0:security/suricata \
 		syslog-ng>=0:sysutils/syslog-ng \
 		unbound>=0:dns/unbound \
 		vim>=0:editors/vim \
