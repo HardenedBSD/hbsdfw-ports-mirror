@@ -2,6 +2,7 @@
 
 PORTNAME=	hbsdfw-core
 PORTVERSION=	1.0
+PORTREVISION=	1
 CATEGORIES=	hardenedbsd
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -92,7 +93,7 @@ USE_GITLAB= yes
 GL_SITE=    https://git.hardenedbsd.org
 GL_ACCOUNT= hbsdfw
 GL_PROJECT= core
-GL_COMMIT=  84ef409b028c1d5e1877d332762a3e3ea960b287
+GL_COMMIT=  8eb662a706d886d5bfbfcfad5d89a7ec29f318c5
 
 SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
 		src/opnsense/scripts/systemhealth/activity.py \
