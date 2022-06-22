@@ -1,6 +1,6 @@
 PORTNAME=	mongodb
 DISTVERSIONPREFIX=	r
-DISTVERSION=	5.0.7
+DISTVERSION=	5.0.9
 CATEGORIES=	databases net
 MASTER_SITES=	https://fastdl.mongodb.org/src/ \
 		http://fastdl.mongodb.org/src/
@@ -41,16 +41,6 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
-CONFLICTS_INSTALL=	mongodb36 mongodb4[024]
-
-USERS=		mongodb
-GROUPS=		mongodb
-
-OPTIONS_DEFINE=			LTO SASL SSL
-OPTIONS_DEFAULT=		LTO SASL SSL
-OPTIONS_EXCLUDE_aarch64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
-OPTIONS_EXCLUDE_aarch64_14=	LTO # Does not work with llvm12/llvm13 on aarch64.
-
 MAKE_ARGS=	--cxx-std=17 \
 		--disable-warnings-as-errors \
 		--libc++ \
@@ -61,6 +51,16 @@ MAKE_ARGS=	--cxx-std=17 \
 		-j ${MAKE_JOBS_NUMBER} \
 		AR=${PREFIX}/bin/ar \
 		VERBOSE=on
+
+CONFLICTS_INSTALL=	mongodb36 mongodb4[024]
+
+USERS=		mongodb
+GROUPS=		mongodb
+
+OPTIONS_DEFINE=			LTO SASL SSL
+OPTIONS_DEFAULT=		LTO SASL SSL
+OPTIONS_EXCLUDE_aarch64=	${OPTIONS_EXCLUDE_${ARCH}_${OSREL:R}}
+OPTIONS_EXCLUDE_aarch64_14=	LTO # Does not work with llvm12/llvm13 on aarch64.
 
 LTO_MAKE_ARGS=	--lto=on
 
@@ -95,9 +95,10 @@ do-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${f}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/rpm/mongod.conf ${STAGEDIR}${PREFIX}/etc/mongodb.conf.sample
-	@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}
 .for doc in LICENSE-Community.txt MPL-2 README THIRD-PARTY-NOTICES
 	${MV} ${STAGEDIR}${PREFIX}/${doc} ${STAGEDIR}${DOCSDIR}/
 .endfor
+	${RM} ${STAGEDIR}${PREFIX}/bin/resmoke.py
 
 .include <bsd.port.post.mk>

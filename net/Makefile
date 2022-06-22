@@ -247,6 +247,7 @@
     SUBDIR += honeyd
     SUBDIR += hostapd
     SUBDIR += hostapd-devel
+    SUBDIR += hostapd29
     SUBDIR += hping3
     SUBDIR += hsflowd
     SUBDIR += htpdate
@@ -976,7 +977,6 @@
     SUBDIR += pecl-xmlrpc
     SUBDIR += pecl-zmq
     SUBDIR += pen
-    SUBDIR += pfinger
     SUBDIR += php74-ldap
     SUBDIR += php74-soap
     SUBDIR += php74-sockets
@@ -1322,6 +1322,7 @@
     SUBDIR += rubygem-no_proxy_fix
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
+    SUBDIR += rubygem-oauth21
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
@@ -1392,6 +1393,7 @@
     SUBDIR += ryu
     SUBDIR += s5cmd
     SUBDIR += sacc
+    SUBDIR += sakisafecli
     SUBDIR += samba412
     SUBDIR += samba413
     SUBDIR += samplicator

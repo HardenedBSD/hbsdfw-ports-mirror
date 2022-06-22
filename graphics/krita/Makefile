@@ -13,8 +13,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 MPROTECT_DISABLE=   bin/krita
 
-BUILD_DEPENDS=	vc>=1.1.0:devel/vc \
-		libheif>=1.12.0:graphics/libheif
+BUILD_DEPENDS=	libheif>=1.12.0:graphics/libheif
 LIB_DEPENDS=	libImath.so:math/Imath \
 		libOpenColorIO.so:graphics/opencolorio \
 		libX11.so:x11/libX11 \
@@ -63,5 +62,13 @@ OPENEXR_CMAKE_BOOL_OFF=	CMAKE_DISABLE_FIND_PACKAGE_OpenEXR
 
 PLIST_SUB=	SHLIB_VER=17.0.0 \
 		SHLIB_SHVER=17
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH} == i386
+BUILD_DEPENDS+=	vc>=1.1.0:devel/vc
+.else
+CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Vc=ON
+.endif
 
 .include <bsd.port.mk>
