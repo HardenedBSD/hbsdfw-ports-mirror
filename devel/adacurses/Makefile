@@ -14,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/README
 
 USE_HARDENING=	pie:off retpoline:off
 
+EXPIRATION_DATE=2022-09-30
+
 USES=		ada gmake pkgconfig tar:tgz
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-ada-include=${PREFIX}/include/adacurses \

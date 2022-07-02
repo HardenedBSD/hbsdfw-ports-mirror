@@ -40,7 +40,7 @@ PAGEEXEC_DISABLE+=	bin/mongo
 PAGEEXEC_DISABLE+=	bin/mongod
 PAGEEXEC_DISABLE+=	bin/mongos
 
-CONFLICTS_INSTALL=	mongodb36 mongodb4[24] mongodb50
+CONFLICTS_INSTALL=	mongodb[0-9][0-9] # etc/mongodb.conf.sample
 
 SHEBANG_FILES=	src/mongo/installer/compass/install_compass
 python_OLD_CMD=	@python_interpreter@

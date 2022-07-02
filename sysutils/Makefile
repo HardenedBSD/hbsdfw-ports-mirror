@@ -374,7 +374,6 @@
     SUBDIR += finfo
     SUBDIR += firstboot-cloudsetup
     SUBDIR += firstboot-freebsd-update
-    SUBDIR += firstboot-growfs
     SUBDIR += firstboot-pkgs
     SUBDIR += flasher
     SUBDIR += flashrom
@@ -480,7 +479,6 @@
     SUBDIR += gnome-settings-daemon
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
-    SUBDIR += go-btfs
     SUBDIR += go-wtf
     SUBDIR += goaccess
     SUBDIR += goawk
@@ -946,6 +944,7 @@
     SUBDIR += pax-utils
     SUBDIR += pbimaker
     SUBDIR += pc-networkmanager
+    SUBDIR += pc-sysinstall
     SUBDIR += pcapfix
     SUBDIR += pciutils
     SUBDIR += pcpustat
@@ -967,7 +966,6 @@
     SUBDIR += pefs-kmod
     SUBDIR += perp
     SUBDIR += personality
-    SUBDIR += pesign
     SUBDIR += pfetch
     SUBDIR += pflogx
     SUBDIR += pfstat
@@ -1588,7 +1586,6 @@
     SUBDIR += xpipe
     SUBDIR += xstow
     SUBDIR += xsysstats
-    SUBDIR += xvidcap
     SUBDIR += yadf
     SUBDIR += yadm
     SUBDIR += yank
