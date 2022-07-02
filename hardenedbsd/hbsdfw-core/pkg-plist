@@ -6,12 +6,6 @@ etc/bogonsv6.sample
 etc/config.xml.sample
 etc/devd/carp.conf
 etc/devd/ifnet.conf
-etc/dh-parameters.1024.sample
-etc/dh-parameters.2048.rfc7919
-etc/dh-parameters.2048.sample
-etc/dh-parameters.3072.rfc7919
-etc/dh-parameters.4096.rfc7919
-etc/dh-parameters.4096.sample
 etc/dhcpd.opnsense.d/README
 etc/dhcpd6.opnsense.d/README
 etc/dnsmasq.conf.d/README
@@ -44,6 +38,7 @@ etc/inc/plugins.inc.d/openssh.inc
 etc/inc/plugins.inc.d/openvpn.inc
 etc/inc/plugins.inc.d/openvpn/attributes.sh
 etc/inc/plugins.inc.d/openvpn/auth-user.php
+etc/inc/plugins.inc.d/openvpn/dh.rfc7919
 etc/inc/plugins.inc.d/openvpn/ovpn-linkdown
 etc/inc/plugins.inc.d/openvpn/ovpn-linkup
 etc/inc/plugins.inc.d/openvpn/ovpn_auth_verify
@@ -89,6 +84,7 @@ etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20200313
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20210104
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20210629
 etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20210903
+etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20220701
 etc/pkg/repos/FreeBSD.conf.sample
 etc/pkg/repos/OPNsense.conf.sample
 etc/rc
@@ -149,7 +145,7 @@ etc/rc.syshook.d/early/90-carp
 etc/rc.syshook.d/monitor/10-dpinger
 etc/rc.syshook.d/start/10-newwanip
 etc/rc.syshook.d/start/20-freebsd
-etc/rc.syshook.d/start/21-syslog-ng
+etc/rc.syshook.d/start/25-syslog
 etc/rc.syshook.d/start/90-carp
 etc/rc.syshook.d/start/90-cron
 etc/rc.syshook.d/start/95-beep
@@ -298,6 +294,7 @@ opnsense/mvc/app/controllers/OPNsense/Cron/forms/dialogEdit.xml
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/ActivityController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/ActivityController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/DnsController.php
+opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/DnsDiagnosticsController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/FirewallController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/InterfaceController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/LogController.php
@@ -306,6 +303,7 @@ opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/NetflowController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/NetworkinsightController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/SystemhealthController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/TrafficController.php
+opnsense/mvc/app/controllers/OPNsense/Diagnostics/DnsDiagnosticsController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/FirewallController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/InterfaceController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/LogController.php
@@ -313,6 +311,7 @@ opnsense/mvc/app/controllers/OPNsense/Diagnostics/NetflowController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/NetworkinsightController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/SystemhealthController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/TrafficController.php
+opnsense/mvc/app/controllers/OPNsense/Diagnostics/forms/dns_diagnostics.xml
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/forms/netflow_capture.xml
 opnsense/mvc/app/controllers/OPNsense/Firewall/AliasController.php
 opnsense/mvc/app/controllers/OPNsense/Firewall/AliasUtilController.php
@@ -532,6 +531,8 @@ opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_0.php
 opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_2.php
 opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_3.php
 opnsense/mvc/app/models/OPNsense/Diagnostics/ACL/ACL.xml
+opnsense/mvc/app/models/OPNsense/Diagnostics/DnsDiagnostics.php
+opnsense/mvc/app/models/OPNsense/Diagnostics/DnsDiagnostics.xml
 opnsense/mvc/app/models/OPNsense/Diagnostics/Lvtemplate.php
 opnsense/mvc/app/models/OPNsense/Diagnostics/Lvtemplate.xml
 opnsense/mvc/app/models/OPNsense/Diagnostics/Menu/Menu.xml
@@ -619,6 +620,7 @@ opnsense/mvc/app/views/OPNsense/Core/not_found.volt
 opnsense/mvc/app/views/OPNsense/Core/reboot.volt
 opnsense/mvc/app/views/OPNsense/Cron/index.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/arp.volt
+opnsense/mvc/app/views/OPNsense/Diagnostics/dns_diagnostics.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/fw_log.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/fw_pftop.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/fw_states.volt
@@ -733,6 +735,7 @@ opnsense/scripts/OPNsense/Monit/setup.sh
 opnsense/scripts/dhcp/cleanup_leases4.php
 opnsense/scripts/dhcp/get_leases.py
 opnsense/scripts/dhcp/prefixes.php
+opnsense/scripts/dns/query_dns.py
 opnsense/scripts/dns/unbound_dhcpd.py
 opnsense/scripts/filter/delete_table.py
 opnsense/scripts/filter/download_geoip.py
@@ -872,7 +875,6 @@ opnsense/scripts/syslog/generate_certs
 opnsense/scripts/syslog/list_applications.php
 opnsense/scripts/syslog/lockout_handler
 opnsense/scripts/syslog/log_archive
-opnsense/scripts/system/dh_parameters.sh
 opnsense/scripts/system/list_interrupts.py
 opnsense/scripts/system/nameservers.php
 opnsense/scripts/system/rfc5246_cipher_suites.csv
@@ -956,7 +958,6 @@ opnsense/service/templates/OPNsense/Filter/filter_tables.conf
 opnsense/service/templates/OPNsense/IDS/+TARGETS
 opnsense/service/templates/OPNsense/IDS/OPNsense.rules
 opnsense/service/templates/OPNsense/IDS/classification.config
-opnsense/service/templates/OPNsense/IDS/custom.yaml
 opnsense/service/templates/OPNsense/IDS/custom.yaml.sample
 opnsense/service/templates/OPNsense/IDS/newsyslog.conf
 opnsense/service/templates/OPNsense/IDS/rc.conf.d
@@ -1786,7 +1787,6 @@ www/diag_authentication.php
 www/diag_backup.php
 www/diag_confbak.php
 www/diag_defaults.php
-www/diag_dns.php
 www/diag_ipsec.php
 www/diag_ipsec_leases.php
 www/diag_ipsec_sad.php
