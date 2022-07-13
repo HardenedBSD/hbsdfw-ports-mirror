@@ -187,6 +187,7 @@
     SUBDIR += blahtexml
     SUBDIR += blas
     SUBDIR += blasfeo
+    SUBDIR += blaspp
     SUBDIR += blaze
     SUBDIR += blazeiterative
     SUBDIR += blis
@@ -245,6 +246,7 @@
     SUBDIR += concorde
     SUBDIR += convertall
     SUBDIR += coq
+    SUBDIR += cosma
     SUBDIR += couenne
     SUBDIR += coxeter3
     SUBDIR += cppad
@@ -415,6 +417,7 @@
     SUBDIR += lapack++
     SUBDIR += lapack95
     SUBDIR += lapacke
+    SUBDIR += lapackpp
     SUBDIR += laspack
     SUBDIR += latte-integrale
     SUBDIR += lcalc
@@ -1088,6 +1091,7 @@
     SUBDIR += teyjus
     SUBDIR += timbl
     SUBDIR += tiny-bignum-c
+    SUBDIR += tlapack
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz

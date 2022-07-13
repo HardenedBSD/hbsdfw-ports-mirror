@@ -87,6 +87,9 @@
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
     SUBDIR += bacula11-server
+    SUBDIR += bacula13-client
+    SUBDIR += bacula13-docs
+    SUBDIR += bacula13-server
     SUBDIR += bacula9-client
     SUBDIR += bacula9-client-static
     SUBDIR += bacula9-docs
@@ -170,14 +173,14 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
-    SUBDIR += cfengine316
+    SUBDIR += cfengine-masterfiles320
     SUBDIR += cfengine317
     SUBDIR += cfengine318
     SUBDIR += cfengine319
+    SUBDIR += cfengine320
     SUBDIR += chaoskube
     SUBDIR += checkrestart
     SUBDIR += chezmoi
@@ -455,6 +458,7 @@
     SUBDIR += garcon
     SUBDIR += gather
     SUBDIR += gconf-editor
+    SUBDIR += gcp-ops-agent
     SUBDIR += gdisk
     SUBDIR += gdmap
     SUBDIR += gdu
@@ -1519,6 +1523,7 @@
     SUBDIR += virtualmin
     SUBDIR += vivid
     SUBDIR += vm-bhyve
+    SUBDIR += vm-bhyve-devel
     SUBDIR += vmdktool
     SUBDIR += vmtouch
     SUBDIR += vobcopy
