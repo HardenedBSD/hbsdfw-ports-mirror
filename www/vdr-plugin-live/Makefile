@@ -1,5 +1,3 @@
-# Created by: Juergen Lock <nox@FreeBSD.org>
-
 PORTNAME=	vdr-plugin-live
 PORTVERSION=	0.3.0
 PORTREVISION=	5
@@ -23,6 +21,8 @@ MAKE_ARGS+=	INCLUDES="-I${LOCALBASE}/include -I${WRKSRC}"
 MAKE_ARGS+=	PREFIX="${PREFIX}"
 USES=		compiler:c++11-lang
 USE_CXXSTD=	c++11
+
+USE_GCC=	10
 
 OPTIONS_DEFINE=	DOCS
 

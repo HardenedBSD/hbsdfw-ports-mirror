@@ -1,10 +1,8 @@
-# Created by: Dmitry Sivachenko <dima@Chg.RU>
-
 PORTNAME=	rrdtool
 PORTVERSION=	1.7.2
 PORTREVISION=	6
 CATEGORIES=	databases graphics
-MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
+MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/archive/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Round Robin Database Tools

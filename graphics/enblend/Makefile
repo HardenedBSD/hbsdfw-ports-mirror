@@ -1,5 +1,3 @@
-# Created by: cartola@openit.com.br
-
 PORTNAME=	enblend
 PORTVERSION=	4.2
 PORTREVISION=	19
@@ -25,6 +23,8 @@ LIB_DEPENDS=	liblcms2.so:graphics/lcms2 \
 USES=		compiler:features gmake jpeg localbase pkgconfig
 
 GNU_CONFIGURE=	yes
+
+LLD_UNSAFE=	yes
 
 PLIST_FILES=	bin/enblend bin/enfuse man/man1/enblend.1.gz man/man1/enfuse.1.gz
 PORTDOCS=	AUTHORS NEWS README

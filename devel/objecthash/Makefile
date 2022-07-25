@@ -1,5 +1,3 @@
-# Created by: Edward Tomasz Napierala <trasz@FreeBSD.org>
-
 PORTNAME=	objecthash
 PORTVERSION=	20160802
 PORTREVISION=	16
@@ -19,6 +17,9 @@ GH_ACCOUNT=	benlaurie
 GH_TAGNAME=	770874c
 
 USE_LDCONFIG=	yes
+
+CFLAGS+=	-Wno-unused-but-set-variable
+USE_GCC=	yes:build
 
 ALL_TARGET=	libobjecthash.so
 

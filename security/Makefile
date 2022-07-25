@@ -40,7 +40,6 @@
     SUBDIR += aws-vault
     SUBDIR += barnyard2
     SUBDIR += barnyard2-sguil
-    SUBDIR += base-audit
     SUBDIR += bastillion
     SUBDIR += bcrypt
     SUBDIR += bcwipe
@@ -381,6 +380,7 @@
     SUBDIR += onionscan
     SUBDIR += op
     SUBDIR += openbsm
+    SUBDIR += openca-ocspd
     SUBDIR += openconnect
     SUBDIR += openconnect-freebsd-daemon
     SUBDIR += openconnect-gui

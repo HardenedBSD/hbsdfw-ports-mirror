@@ -1,5 +1,3 @@
-# Created by: Simon Barner <barner@gmx.de>
-
 PORTNAME=	valgrind
 PORTVERSION=	3.20.0.g20220612
 DISTVERSIONPREFIX=	freebsd-
@@ -14,6 +12,9 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_HARDENING=	pie:off relro:off
+
+MPROTECT_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
+SEGVGUARD_DISABLE=	libexec/valgrind/memcheck-amd64-freebsd
 
 ONLY_FOR_ARCHS=	amd64 i386
 

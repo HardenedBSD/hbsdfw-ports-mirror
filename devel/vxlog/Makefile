@@ -1,5 +1,3 @@
-# Created by: Konstantin Lepa <konstantin.lepa@gmail.com>
-
 PORTNAME=	vxlog
 PORTVERSION=	1.0.3
 PORTREVISION=	1
@@ -15,6 +13,8 @@ LICENSE_FILE=	${WRKSRC}/doc/COPYING.txt
 
 USES=		cmake
 USE_LDCONFIG=	yes
+
+USE_GCC=	10
 
 CMAKE_ARGS+=	-DTESTING:BOOL=OFF
 

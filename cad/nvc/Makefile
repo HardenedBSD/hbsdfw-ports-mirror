@@ -1,6 +1,7 @@
 PORTNAME=	nvc
 DISTVERSIONPREFIX=	r
 DISTVERSION=	1.6.2
+PORTREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -29,12 +30,6 @@ TEST_TARGET=	check # one test fails
 MAKE_ARGS=	CFLAGS="${CFLAGS}" # only for tests
 
 LLVM_VERSION=	${LLVM_DEFAULT}
-
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} == FreeBSD && ${OSVERSION} < 1400052 # devel/libunwind installs include/unwind.h only before that version, after which it probably exists in the base
-BUILD_DEPENDS+=	${LOCALBASE}/include/unwind.h:devel/libunwind
-.endif
 
 post-install:
 	${FIND} ${STAGEDIR}${PREFIX} -name "*.so" | ${XARGS} ${STRIP_CMD}

@@ -1,17 +1,19 @@
-# Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-
 PORTNAME=	gcc
-PORTVERSION=	13.0.0.s20220710
+PORTVERSION=	13.0.0.s20220717
 CATEGORIES=	lang
 MASTER_SITES=	GCC/snapshots/${DIST_VERSION}
 PKGNAMESUFFIX=	${SUFFIX}-devel
 DISTNAME=	gcc-${DIST_VERSION}
 
-MAINTAINER=	toolchain@FreeBSD.org
+MAINTAINER=	salvadore@FreeBSD.org
 COMMENT=	GNU Compiler Collection 13
 
 LICENSE=	GPLv3 GPLv3RLE
 LICENSE_COMB=	multi
+
+USE_HARDENING=  pie:off relro:off retpoline:off
+
+USE_GCC=	12
 
 ONLY_FOR_ARCHS=	aarch64 amd64 arm armv6 armv7 i386 powerpc powerpc64 powerpc64le
 

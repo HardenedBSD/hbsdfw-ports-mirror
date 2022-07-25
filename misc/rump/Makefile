@@ -1,5 +1,3 @@
-# Created by: vanilla
-
 PORTNAME=	rump
 PORTVERSION=	20170822
 PORTREVISION=	2
@@ -20,6 +18,9 @@ GH_TAGNAME=	b914579
 GH_TUPLE=	rumpkernel:src-netbsd:82f3a69:netbsd/src
 USE_LDCONFIG=	yes
 USES=		compiler
+
+USE_GCC=	yes:build
+CWARNFLAGS+=	-Wno-error
 
 .include <bsd.port.pre.mk>
 

@@ -1,5 +1,5 @@
 PORTNAME=	vscode
-DISTVERSION=	1.69.0
+DISTVERSION=	1.69.2
 CATEGORIES=	editors
 MASTER_SITES=	https://registry.npmjs.org/esbuild-freebsd-64/-/:esbuild_binary \
 		https://nodejs.org/dist/v${NODE_VER}/:node_headers \
@@ -72,7 +72,7 @@ MPROTECT_DISABLE=	share/code-oss/code-oss
 USE_GITHUB=	yes
 GH_ACCOUNT=	microsoft
 
-SOURCE_COMMIT_HASH=	92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
+SOURCE_COMMIT_HASH=	3b889b090b5ad5793f524b5d1d39fda662b96a2a
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 

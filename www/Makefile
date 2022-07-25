@@ -1536,6 +1536,7 @@
     SUBDIR += py-django-registration-redux
     SUBDIR += py-django-reversion
     SUBDIR += py-django-reversion-compare
+    SUBDIR += py-django-rich
     SUBDIR += py-django-sekizai
     SUBDIR += py-django-simple-captcha
     SUBDIR += py-django-simple-history
@@ -2060,7 +2061,6 @@
     SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails60
     SUBDIR += rubygem-rails61
-    SUBDIR += rubygem-rails61-node16
     SUBDIR += rubygem-rails70
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
@@ -2137,7 +2137,6 @@
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier
-    SUBDIR += rubygem-uglifier-node16
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer

@@ -1,5 +1,3 @@
-# Created by: Johan Strom <johna@stromnet.se>
-
 PORTNAME=	telldus-core
 PORTVERSION=	2.1.2
 PORTREVISION=	7
@@ -27,6 +25,9 @@ CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR="${PREFIX}/etc"
 CMAKE_ARGS+=	-DSTATE_INSTALL_DIR="/var/telldus"
 CXXFLAGS+=	${CXXFLAGS_${CHOSEN_COMPILER_TYPE}}
 CXXFLAGS_clang=	-Wno-c++11-narrowing
+
+USE_GCC=	10
+CXXFLAGS+=	-Wno-narrowing
 
 MAKE_JOBS_UNSAFE=	yes
 

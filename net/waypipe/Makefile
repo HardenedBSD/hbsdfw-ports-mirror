@@ -1,13 +1,15 @@
 PORTNAME=	waypipe
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.8.2
-CATEGORIES=	net
+CATEGORIES=	net wayland
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Network transparency with Wayland
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+USE_GCC=	10
 
 USES=		compiler:c11 localbase:ldflags meson pkgconfig
 USE_GITLAB=	yes
