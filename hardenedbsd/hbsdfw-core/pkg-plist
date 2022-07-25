@@ -743,10 +743,12 @@ opnsense/scripts/OPNsense/Monit/gateway_alert
 opnsense/scripts/OPNsense/Monit/setup.sh
 opnsense/scripts/auth/add_user.php
 opnsense/scripts/dhcp/cleanup_leases4.php
+opnsense/scripts/dhcp/dnsmasq_watcher.py
 opnsense/scripts/dhcp/get_leases.py
 opnsense/scripts/dhcp/prefixes.php
+opnsense/scripts/dhcp/prefixes.sh
+opnsense/scripts/dhcp/unbound_watcher.py
 opnsense/scripts/dns/query_dns.py
-opnsense/scripts/dns/unbound_dhcpd.py
 opnsense/scripts/filter/delete_table.py
 opnsense/scripts/filter/download_geoip.py
 opnsense/scripts/filter/find_table_references.py
@@ -765,7 +767,7 @@ opnsense/scripts/filter/list_rule_ids.py
 opnsense/scripts/filter/list_states.py
 opnsense/scripts/filter/list_table.py
 opnsense/scripts/filter/list_tables.py
-opnsense/scripts/filter/pfstatistcs.py
+opnsense/scripts/filter/pfstatistics.py
 opnsense/scripts/filter/pftablecount.py
 opnsense/scripts/filter/pftop.py
 opnsense/scripts/filter/read_log.py
@@ -809,6 +811,7 @@ opnsense/scripts/interfaces/ppp-linkdown.sh
 opnsense/scripts/interfaces/ppp-linkup.sh
 opnsense/scripts/interfaces/ppp-uptime.sh
 opnsense/scripts/interfaces/reconfigure_vlans.php
+opnsense/scripts/interfaces/rtsold_resolvconf.sh
 opnsense/scripts/interfaces/traffic_stats.php
 opnsense/scripts/interfaces/traffic_top.py
 opnsense/scripts/ipsec/connect.py
@@ -842,7 +845,6 @@ opnsense/scripts/proxy/fetchACLs.py
 opnsense/scripts/proxy/generate_cert.php
 opnsense/scripts/proxy/lib/__init__.py
 opnsense/scripts/proxy/setup.sh
-opnsense/scripts/remote_backup.php
 opnsense/scripts/routes/del_route.py
 opnsense/scripts/routes/gateway_status.php
 opnsense/scripts/routes/gateways.php
@@ -883,6 +885,7 @@ opnsense/scripts/syslog/lockout_handler
 opnsense/scripts/syslog/log_archive
 opnsense/scripts/system/list_interrupts.py
 opnsense/scripts/system/nameservers.php
+opnsense/scripts/system/remote_backup.php
 opnsense/scripts/system/rfc5246_cipher_suites.csv
 opnsense/scripts/system/ssl_ciphers.py
 opnsense/scripts/system/sysctl.py
@@ -1021,6 +1024,7 @@ opnsense/service/templates/OPNsense/Syslog/local/configd.conf
 opnsense/service/templates/OPNsense/Syslog/local/dhcpd.conf
 opnsense/service/templates/OPNsense/Syslog/local/dnsmasq.conf
 opnsense/service/templates/OPNsense/Syslog/local/filter.conf
+opnsense/service/templates/OPNsense/Syslog/local/firewall.conf
 opnsense/service/templates/OPNsense/Syslog/local/gateways.conf
 opnsense/service/templates/OPNsense/Syslog/local/ipsec.conf
 opnsense/service/templates/OPNsense/Syslog/local/lighttpd.conf
