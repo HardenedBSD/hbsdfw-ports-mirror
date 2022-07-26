@@ -2,7 +2,7 @@
 
 PORTNAME=	hbsdfw-core
 PORTVERSION=	1.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	hardenedbsd
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 
@@ -10,8 +10,6 @@ MAINTAINER=	shawn.webb@hardenedbsd.org
 COMMENT=	HardenedBSD Firewall Core package
 
 LICENSE=	BSD2CLAUSE
-
-IGNORE_WITH_PHP=	80 81
 
 OPNSENSE_PORT_REV=	1
 
@@ -75,9 +73,7 @@ RUN_DEPENDS=	beep>=0:audio/beep \
 		${PHP_PKGNAMEPREFIX}filter>=0:security/${PHP_PKGNAMEPREFIX}filter \
 		${PHP_PKGNAMEPREFIX}gettext>=0:devel/${PHP_PKGNAMEPREFIX}gettext \
 		${PHP_PKGNAMEPREFIX}google-api-php-client>=0:opnsense/google-api-php-client \
-		${PHP_PKGNAMEPREFIX}json>=0:devel/${PHP_PKGNAMEPREFIX}json \
 		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
-		${PHP_PKGNAMEPREFIX}openssl>=0:security/${PHP_PKGNAMEPREFIX}openssl \
 		${PHP_PKGNAMEPREFIX}pdo>=0:databases/${PHP_PKGNAMEPREFIX}pdo \
 		${PHP_PKGNAMEPREFIX}session>=0:www/${PHP_PKGNAMEPREFIX}session \
 		${PHP_PKGNAMEPREFIX}simplexml>=0:textproc/${PHP_PKGNAMEPREFIX}simplexml \
@@ -87,14 +83,14 @@ RUN_DEPENDS=	beep>=0:audio/beep \
 		${PHP_PKGNAMEPREFIX}phpseclib>=0:opnsense/phpseclib \
 		${PHP_PKGNAMEPREFIX}mbstring>=0:converters/${PHP_PKGNAMEPREFIX}mbstring
 
-USES=	python:3.8 php:flavors shebangfix
+USES=	python:3.9 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
 
 USE_GITLAB= yes
 GL_SITE=    https://git.hardenedbsd.org
 GL_ACCOUNT= hbsdfw
 GL_PROJECT= core
-GL_COMMIT=  105f4f6bafb0bd4a6c3d6de2054019bb6c5fb7a9
+GL_COMMIT=  343a899d752944ea1259a23660e1ce30eeb1aac9
 
 SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
 		src/opnsense/scripts/systemhealth/activity.py \
