@@ -21,7 +21,6 @@ etc/inc/filter.lib.inc
 etc/inc/interfaces.inc
 etc/inc/interfaces.lib.inc
 etc/inc/legacy_bindings.inc
-etc/inc/notices.inc
 etc/inc/plugins.inc
 etc/inc/plugins.inc.d/core.inc
 etc/inc/plugins.inc.d/dhcpd.inc
@@ -465,6 +464,10 @@ opnsense/mvc/app/library/OPNsense/Phalcon/Filter/Validation/Validator/Regex.php
 opnsense/mvc/app/library/OPNsense/Phalcon/Filter/Validation/Validator/Url.php
 opnsense/mvc/app/library/OPNsense/Phalcon/Logger/Logger.php
 opnsense/mvc/app/library/OPNsense/Routing/Gateways.php
+opnsense/mvc/app/library/OPNsense/System/AbstractStatus.php
+opnsense/mvc/app/library/OPNsense/System/Status/CrashReporterStatus.php
+opnsense/mvc/app/library/OPNsense/System/Status/FirewallStatus.php
+opnsense/mvc/app/library/OPNsense/System/SystemStatus.php
 opnsense/mvc/app/models/OPNsense/Base/BaseModel.php
 opnsense/mvc/app/models/OPNsense/Base/BaseModelMigration.php
 opnsense/mvc/app/models/OPNsense/Base/BaseValidator.php
@@ -800,13 +803,13 @@ opnsense/scripts/firmware/unlock.sh
 opnsense/scripts/firmware/update.sh
 opnsense/scripts/firmware/upgrade.sh
 opnsense/scripts/interfaces/dhclient-script
+opnsense/scripts/interfaces/ifctl.sh
 opnsense/scripts/interfaces/list_arp.py
 opnsense/scripts/interfaces/list_interfaces.php
 opnsense/scripts/interfaces/list_macdb.py
 opnsense/scripts/interfaces/list_ndp.py
 opnsense/scripts/interfaces/list_sockstat.py
 opnsense/scripts/interfaces/mpd.script
-opnsense/scripts/interfaces/nameserver.sh
 opnsense/scripts/interfaces/ppp-linkdown.sh
 opnsense/scripts/interfaces/ppp-linkup.sh
 opnsense/scripts/interfaces/ppp-uptime.sh
@@ -888,6 +891,7 @@ opnsense/scripts/system/nameservers.php
 opnsense/scripts/system/remote_backup.php
 opnsense/scripts/system/rfc5246_cipher_suites.csv
 opnsense/scripts/system/ssl_ciphers.py
+opnsense/scripts/system/status.php
 opnsense/scripts/system/sysctl.py
 opnsense/scripts/system/temperature.sh
 opnsense/scripts/system/trigger_config_changed_events.py
@@ -1642,6 +1646,7 @@ opnsense/www/js/nv.d3.min.js
 opnsense/www/js/nv.d3.min.js.LICENSE.md
 opnsense/www/js/opnsense.js
 opnsense/www/js/opnsense_bootgrid_plugin.js
+opnsense/www/js/opnsense_status.js
 opnsense/www/js/opnsense_theme.js
 opnsense/www/js/opnsense_ui.js
 opnsense/www/js/pick-a-color-1.2.3.LICENSE
