@@ -475,7 +475,6 @@
     SUBDIR += gkrellm-trayicons
     SUBDIR += gkrellm2
     SUBDIR += gkrelltop
-    SUBDIR += gksu
     SUBDIR += glogg
     SUBDIR += glow
     SUBDIR += gnome-control-center
@@ -608,6 +607,7 @@
     SUBDIR += kio-fuse
     SUBDIR += kldfind
     SUBDIR += kldpatch
+    SUBDIR += kopia
     SUBDIR += kops
     SUBDIR += kpmcore
     SUBDIR += krename
@@ -632,7 +632,6 @@
     SUBDIR += libfvde
     SUBDIR += libg15
     SUBDIR += libg15render
-    SUBDIR += libgksu
     SUBDIR += libieee1284
     SUBDIR += libptytty
     SUBDIR += libretto-config
@@ -732,7 +731,6 @@
     SUBDIR += memtester
     SUBDIR += metalog
     SUBDIR += mfid
-    SUBDIR += mgeupsd
     SUBDIR += minikube
     SUBDIR += minimunin
     SUBDIR += minipot
@@ -1398,6 +1396,7 @@
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
     SUBDIR += tmux23
+    SUBDIR += topgrade
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
