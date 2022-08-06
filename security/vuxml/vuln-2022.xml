@@ -1,3 +1,210 @@
+  <vuln vid="8bec3994-104d-11ed-a7ac-0800273f11ea">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.17.0</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20114">
+	  <p>Use git.HOME_PATH for Git HOME directory</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20332">
+	  <p>Add write check for creating Commit status</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/18697">
+	  <p>Remove deprecated SSH ciphers from default</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.17.0</url>
+    </references>
+    <dates>
+      <discovery>2022-07-12</discovery>
+      <entry>2022-08-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="bc43a578-14ec-11ed-856e-d4c9ef517024">
+    <topic>Unbound -- Multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>unbound</name>
+	<range><lt>1.16.2</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>NLnet Labs reports:</p>
+	<blockquote cite="https://www.nlnetlabs.nl/projects/unbound/security-advisories/">
+	  <p>novel type of the "ghost domain names" attack. The vulnerability
+	    works by targeting an Unbound instance. Unbound is queried for a
+	    rogue domain name when the cached delegation information is about to
+	    expire. The rogue nameserver delays the response so that the cached
+	    delegation information is expired. Upon receiving the delayed answer
+	    containing the delegation information, Unbound overwrites the now
+	    expired entries. This action can be repeated when the delegation
+	    information is about to expire making the rogue delegation
+	    information ever-updating.</p>
+	  <p>novel type of the "ghost domain names" attack. The vulnerability
+	    works by targeting an Unbound instance. Unbound is queried for a
+	    subdomain of a rogue domain name. The rogue nameserver returns
+	    delegation information for the subdomain that updates Unbound's
+	    delegation cache. This action can be repeated before expiry of the
+	    delegation information by querying Unbound for a second level
+	    subdomain which the rogue nameserver provides new delegation
+	    information.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-30699</cvename>
+      <cvename>CVE-2022-30698</cvename>
+      <url>https://www.nlnetlabs.nl/projects/unbound/security-advisories/</url>
+    </references>
+    <dates>
+      <discovery>2022-08-01</discovery>
+      <entry>2022-08-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="df29c391-1046-11ed-a7ac-0800273f11ea">
+    <topic>gitea -- multiple issues</topic>
+    <affects>
+      <package>
+	<name>gitea</name>
+	<range><lt>1.16.9</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The Gitea team reports:</p>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20334">
+	  <p>Add write check for creating Commit status</p>
+	</blockquote>
+	<blockquote cite="https://github.com/go-gitea/gitea/pull/20196">
+	  <p>Check for permission when fetching user controlled issues</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://github.com/go-gitea/gitea/releases/tag/v1.16.9</url>
+    </references>
+    <dates>
+      <discovery>2022-07-12</discovery>
+      <entry>2022-08-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="3b47104f-1461-11ed-a0c5-080027240888">
+    <topic>Django -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>py38-django32</name>
+	<name>py39-django32</name>
+	<name>py310-django32</name>
+	<range><lt>3.2.15</lt></range>
+      </package>
+      <package>
+	<name>py38-django40</name>
+	<name>py39-django40</name>
+	<name>py310-django40</name>
+	<range><lt>4.0.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Django reports:</p>
+	<blockquote cite="https://www.djangoproject.com/weblog/2022/aug/03/security-releases/">
+	  <p>CVE-2022-36359: Potential reflected file download vulnerability in FileResponse.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-36359</cvename>
+      <url>https://www.djangoproject.com/weblog/2022/aug/03/security-releases/</url>
+    </references>
+    <dates>
+      <discovery>2022-08-01</discovery>
+      <entry>2022-08-05</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="96a41723-133a-11ed-be3b-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>104.0.5112.79</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html">
+	  <p>This release contains 27 security fixes, including:</p>
+	  <ul>
+	    <li>[1325699] High CVE-2022-2603: Use after free in Omnibox. Reported by Anonymous on 2022-05-16</li>
+	    <li>[1335316] High CVE-2022-2604: Use after free in Safe Browsing. Reported by Nan Wang(@eternalsakura13) and Guang Gong of 360 Alpha Lab on 2022-06-10</li>
+	    <li>[1338470] High CVE-2022-2605: Out of bounds read in Dawn. Reported by Looben Yang on 2022-06-22</li>
+	    <li>[1330489] High CVE-2022-2606: Use after free in Managed devices API. Reported by Nan Wang(@eternalsakura13) and Guang Gong of 360 Alpha Lab on 2022-05-31</li>
+	    <li>[1286203] High CVE-2022-2607: Use after free in Tab Strip. Reported by @ginggilBesel on 2022-01-11</li>
+	    <li>[1330775] High CVE-2022-2608: Use after free in Overview Mode. Reported by Khalil Zhani on 2022-06-01</li>
+	    <li>[1338560] High CVE-2022-2609: Use after free in Nearby Share. Reported by koocola(@alo_cook) and Guang Gong of 360 Vulnerability Research Institute on 2022-06-22</li>
+	    <li>[1278255] Medium CVE-2022-2610: Insufficient policy enforcement in Background Fetch. Reported by Maurice Dauer on 2021-12-09</li>
+	    <li>[1320538] Medium CVE-2022-2611: Inappropriate implementation in Fullscreen API. Reported by Irvan Kurniawan (sourc7) on 2022-04-28</li>
+	    <li>[1321350] Medium CVE-2022-2612: Side-channel information leakage in Keyboard input. Reported by Erik Kraft (erik.kraft5@gmx.at), Martin Schwarzl (martin.schwarzl@iaik.tugraz.at) on 2022-04-30</li>
+	    <li>[1325256] Medium CVE-2022-2613: Use after free in Input. Reported by Piotr Tworek (Vewd) on 2022-05-13</li>
+	    <li>[1341907] Medium CVE-2022-2614: Use after free in Sign-In Flow. Reported by raven at KunLun lab on 2022-07-05</li>
+	    <li>[1268580] Medium CVE-2022-2615: Insufficient policy enforcement in Cookies. Reported by Maurice Dauer on 2021-11-10</li>
+	    <li>[1302159] Medium CVE-2022-2616: Inappropriate implementation in Extensions API. Reported by Alesandro Ortiz on 2022-03-02</li>
+	    <li>[1292451] Medium CVE-2022-2617: Use after free in Extensions API. Reported by @ginggilBesel on 2022-01-31</li>
+	    <li>[1308422] Medium CVE-2022-2618: Insufficient validation of untrusted input in Internals. Reported by asnine on 2022-03-21</li>
+	    <li>[1332881] Medium CVE-2022-2619: Insufficient validation of untrusted input in Settings. Reported by Oliver Dunk on 2022-06-04</li>
+	    <li>[1337304] Medium CVE-2022-2620: Use after free in WebUI. Reported by Nan Wang(@eternalsakura13) and Guang Gong of 360 Alpha Lab on 2022-06-17</li>
+	    <li>[1323449] Medium CVE-2022-2621: Use after free in Extensions. Reported by Huyna at Viettel Cyber Security on 2022-05-07</li>
+	    <li>[1332392] Medium CVE-2022-2622: Insufficient validation of untrusted input in Safe Browsing. Reported by Imre Rad (@ImreRad) and @j00sean on 2022-06-03</li>
+	    <li>[1337798] Medium CVE-2022-2623: Use after free in Offline. Reported by raven at KunLun lab on 2022-06-20</li>
+	    <li>[1339745] Medium CVE-2022-2624: Heap buffer overflow in PDF. Reported by YU-CHANG CHEN and CHIH-YEN CHANG, working with DEVCORE Internship Program on 2022-06-27</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2022-2603</cvename>
+      <cvename>CVE-2022-2604</cvename>
+      <cvename>CVE-2022-2605</cvename>
+      <cvename>CVE-2022-2606</cvename>
+      <cvename>CVE-2022-2607</cvename>
+      <cvename>CVE-2022-2608</cvename>
+      <cvename>CVE-2022-2609</cvename>
+      <cvename>CVE-2022-2610</cvename>
+      <cvename>CVE-2022-2611</cvename>
+      <cvename>CVE-2022-2612</cvename>
+      <cvename>CVE-2022-2613</cvename>
+      <cvename>CVE-2022-2614</cvename>
+      <cvename>CVE-2022-2615</cvename>
+      <cvename>CVE-2022-2616</cvename>
+      <cvename>CVE-2022-2617</cvename>
+      <cvename>CVE-2022-2618</cvename>
+      <cvename>CVE-2022-2619</cvename>
+      <cvename>CVE-2022-2620</cvename>
+      <cvename>CVE-2022-2621</cvename>
+      <cvename>CVE-2022-2622</cvename>
+      <cvename>CVE-2022-2623</cvename>
+      <cvename>CVE-2022-2624</cvename>
+      <url>https://chromereleases.googleblog.com/2022/08/stable-channel-update-for-desktop.html</url>
+    </references>
+    <dates>
+      <discovery>2022-08-02</discovery>
+      <entry>2022-08-03</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="7f8d5435-125a-11ed-9a69-10c37b4ac2ea">
     <topic>go -- decoding big.Float and big.Rat can panic</topic>
     <affects>
