@@ -82,7 +82,7 @@ etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20200119
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20200313
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20210104
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20210629
-etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20210903
+etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20210903
 etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20220701
 etc/pkg/repos/FreeBSD.conf.sample
 etc/pkg/repos/OPNsense.conf.sample
@@ -117,7 +117,6 @@ etc/rc.newwanip
 etc/rc.newwanipv6
 etc/rc.reboot
 etc/rc.reload_all
-etc/rc.resolv_conf_generate
 etc/rc.restart_webgui
 etc/rc.routing_configure
 etc/rc.shutdown
@@ -760,6 +759,7 @@ opnsense/scripts/filter/kill_table.py
 opnsense/scripts/filter/lib/__init__.py
 opnsense/scripts/filter/lib/alias.py
 opnsense/scripts/filter/lib/arpcache.py
+opnsense/scripts/filter/lib/bgpasn.py
 opnsense/scripts/filter/lib/geoip.py
 opnsense/scripts/filter/lib/interface.py
 opnsense/scripts/filter/lib/states.py
