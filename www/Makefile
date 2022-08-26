@@ -122,6 +122,7 @@
     SUBDIR += drupal9
     SUBDIR += drush
     SUBDIR += dtse
+    SUBDIR += dufs
     SUBDIR += e107
     SUBDIR += e2guardian
     SUBDIR += edbrowse
@@ -1796,6 +1797,8 @@
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
     SUBDIR += qt5-webview
+    SUBDIR += qt6-webchannel
+    SUBDIR += qt6-websockets
     SUBDIR += quark
     SUBDIR += qutebrowser
     SUBDIR += radicale

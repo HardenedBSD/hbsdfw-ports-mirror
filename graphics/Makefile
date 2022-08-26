@@ -277,6 +277,7 @@
     SUBDIR += glosm
     SUBDIR += glpng
     SUBDIR += glslang
+    SUBDIR += glvis
     SUBDIR += glx-utils
     SUBDIR += gmic
     SUBDIR += gmic-qt
@@ -808,6 +809,7 @@
     SUBDIR += poppler-data
     SUBDIR += poppler-glib
     SUBDIR += poppler-qt5
+    SUBDIR += poppler-qt6
     SUBDIR += poppler-utils
     SUBDIR += potrace
     SUBDIR += povray-meta
@@ -958,6 +960,11 @@
     SUBDIR += qt5-pixeltool
     SUBDIR += qt5-svg
     SUBDIR += qt5-wayland
+    SUBDIR += qt6-3d
+    SUBDIR += qt6-imageformats
+    SUBDIR += qt6-lottie
+    SUBDIR += qt6-svg
+    SUBDIR += qt6-wayland
     SUBDIR += qtawesome
     SUBDIR += qtpbfimageplugin
     SUBDIR += qtqr
