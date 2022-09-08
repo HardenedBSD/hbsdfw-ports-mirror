@@ -7,6 +7,8 @@ DISTFILES=	nist_spblas_${DISTVERSION}.zip:1
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	NIST Sparse Basic Linear Algebra Subprograms (BLAS)
+WWW=		https://math.nist.gov/spblas/
+
 LICENSE=	PD
 
 USE_HARDENING=	pie:off

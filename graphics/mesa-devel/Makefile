@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	22.2-branchpoint-1696
-DISTVERSIONSUFFIX=	-ga03ce740bbb
+DISTVERSION=	22.2-branchpoint-1826
+DISTVERSIONSUFFIX=	-gae7532e0cce
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -13,6 +13,7 @@ PATCHFILES+=	19eb2c30bff0.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
+WWW=		https://www.mesa3d.org/
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/docs/license.rst

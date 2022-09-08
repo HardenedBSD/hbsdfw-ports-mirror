@@ -7,6 +7,7 @@ PKGNAMESUFFIX=		-tor
 
 MAINTAINER=	egypcio@FreeBSD.org
 COMMENT=	Pluggable Transport using WebRTC inspired by Flashproxy
+WWW=		https://snowflake.torproject.org/
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKDIR}/${PORTNAME}-${TPO_SNOWFLAKE}/LICENSE
