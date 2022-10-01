@@ -341,6 +341,11 @@ MAKE_ENV+=	verbose=1
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif
 
+.if ${OSVERSION} < 1400000
+# HBSD: OpenJDK is broken in 14-CURRENT.
+OPTIONS_DEFAULT+=	JAVA
+.endif
+
 .if ${ARCH:Mpowerpc*}
 EXTRA_PATCHES+=	${FILESDIR}/powerpc64
 .endif
