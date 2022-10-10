@@ -59,8 +59,6 @@ etc/inc/xmlrpc.inc
 etc/inc/xmlrpc/legacy.inc
 etc/inc/xmlrpc/service.inc
 etc/inc/xmlrpc/test.inc
-etc/ipsec.opnsense.d/README
-etc/ipsec.secrets.opnsense.d/README
 etc/lighttpd_webgui/conf.d/README
 etc/lighttpd_webgui/conf.d/extforward.conf.example
 etc/netflow.conf.example
@@ -154,8 +152,8 @@ etc/rc.syshook.d/stop/99-config
 etc/rc.syshook.d/update/10-refresh
 etc/ssl/opnsense.cnf
 etc/strongswan.opnsense.d/README
-etc/syslog-ng.conf.d/legacy.conf
 etc/unbound.opnsense.d/README
+etc/unbound.opnsense.d/miscellaneous.conf
 libexec/opnsense-auth
 opnsense/contrib/IXR/IXR_Library.php
 opnsense/contrib/base32/Base32.php
@@ -334,18 +332,23 @@ opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogRuleset.xml
 opnsense/mvc/app/controllers/OPNsense/IDS/forms/dialogUserDefined.xml
 opnsense/mvc/app/controllers/OPNsense/IDS/forms/generalSettings.xml
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/KeyPairsController.php
+opnsense/mvc/app/controllers/OPNsense/IPsec/Api/LeasesController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/LegacySubsystemController.php
+opnsense/mvc/app/controllers/OPNsense/IPsec/Api/PreSharedKeysController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/SadController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/SessionsController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/SpdController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/Api/TunnelController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/KeyPairsController.php
+opnsense/mvc/app/controllers/OPNsense/IPsec/LeasesController.php
+opnsense/mvc/app/controllers/OPNsense/IPsec/PreSharedKeysController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/SadController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/SessionsController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/SpdController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/TunnelsController.php
 opnsense/mvc/app/controllers/OPNsense/IPsec/forms/dialogKeyPair.xml
+opnsense/mvc/app/controllers/OPNsense/IPsec/forms/dialogPSK.xml
 opnsense/mvc/app/controllers/OPNsense/Interfaces/Api/LoopbackSettingsController.php
 opnsense/mvc/app/controllers/OPNsense/Interfaces/Api/VlanSettingsController.php
 opnsense/mvc/app/controllers/OPNsense/Interfaces/Api/VxlanSettingsController.php
@@ -391,6 +394,7 @@ opnsense/mvc/app/controllers/OPNsense/TrafficShaper/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/TrafficShaper/forms/dialogPipe.xml
 opnsense/mvc/app/controllers/OPNsense/TrafficShaper/forms/dialogQueue.xml
 opnsense/mvc/app/controllers/OPNsense/TrafficShaper/forms/dialogRule.xml
+opnsense/mvc/app/controllers/OPNsense/Unbound/AdvancedController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/Api/DiagnosticsController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/Api/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/Api/SettingsController.php
@@ -399,6 +403,7 @@ opnsense/mvc/app/controllers/OPNsense/Unbound/DotController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/ForwardController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/OverridesController.php
 opnsense/mvc/app/controllers/OPNsense/Unbound/StatsController.php
+opnsense/mvc/app/controllers/OPNsense/Unbound/forms/advanced.xml
 opnsense/mvc/app/controllers/OPNsense/Unbound/forms/dialogDomainOverride.xml
 opnsense/mvc/app/controllers/OPNsense/Unbound/forms/dialogDot.xml
 opnsense/mvc/app/controllers/OPNsense/Unbound/forms/dialogHostAlias.xml
@@ -579,6 +584,7 @@ opnsense/mvc/app/models/OPNsense/IPsec/IPsec.php
 opnsense/mvc/app/models/OPNsense/IPsec/IPsec.xml
 opnsense/mvc/app/models/OPNsense/IPsec/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/IPsec/Migrations/M1_0_0.php
+opnsense/mvc/app/models/OPNsense/IPsec/Migrations/M1_0_1.php
 opnsense/mvc/app/models/OPNsense/Interfaces/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/Interfaces/FieldTypes/VlanInterfaceField.php
 opnsense/mvc/app/models/OPNsense/Interfaces/Loopback.php
@@ -623,6 +629,7 @@ opnsense/mvc/app/models/OPNsense/Unbound/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/Unbound/Migrations/M1_0_0.php
 opnsense/mvc/app/models/OPNsense/Unbound/Migrations/M1_0_1.php
 opnsense/mvc/app/models/OPNsense/Unbound/Migrations/M1_0_2.php
+opnsense/mvc/app/models/OPNsense/Unbound/Migrations/M1_0_3.php
 opnsense/mvc/app/models/OPNsense/Unbound/Unbound.php
 opnsense/mvc/app/models/OPNsense/Unbound/Unbound.xml
 opnsense/mvc/app/views/OPNsense/CaptivePortal/clients.volt
@@ -656,6 +663,8 @@ opnsense/mvc/app/views/OPNsense/Firewall/category.volt
 opnsense/mvc/app/views/OPNsense/IDS/index.volt
 opnsense/mvc/app/views/OPNsense/IDS/policy.volt
 opnsense/mvc/app/views/OPNsense/IPsec/key_pairs.volt
+opnsense/mvc/app/views/OPNsense/IPsec/leases.volt
+opnsense/mvc/app/views/OPNsense/IPsec/pre_shared_keys.volt
 opnsense/mvc/app/views/OPNsense/IPsec/sad.volt
 opnsense/mvc/app/views/OPNsense/IPsec/sessions.volt
 opnsense/mvc/app/views/OPNsense/IPsec/spd.volt
@@ -671,6 +680,7 @@ opnsense/mvc/app/views/OPNsense/Routes/index.volt
 opnsense/mvc/app/views/OPNsense/Syslog/index.volt
 opnsense/mvc/app/views/OPNsense/TrafficShaper/index.volt
 opnsense/mvc/app/views/OPNsense/TrafficShaper/statistics.volt
+opnsense/mvc/app/views/OPNsense/Unbound/advanced.volt
 opnsense/mvc/app/views/OPNsense/Unbound/dnsbl.volt
 opnsense/mvc/app/views/OPNsense/Unbound/dot.volt
 opnsense/mvc/app/views/OPNsense/Unbound/overrides.volt
@@ -1063,10 +1073,10 @@ opnsense/service/templates/OPNsense/Syslog/syslog-ng-local.conf
 opnsense/service/templates/OPNsense/Syslog/syslog-ng-lockout.conf
 opnsense/service/templates/OPNsense/Syslog/syslog-ng.conf
 opnsense/service/templates/OPNsense/Unbound/core/+TARGETS
+opnsense/service/templates/OPNsense/Unbound/core/advanced.conf
 opnsense/service/templates/OPNsense/Unbound/core/blocklists.conf
 opnsense/service/templates/OPNsense/Unbound/core/domainoverrides.conf
 opnsense/service/templates/OPNsense/Unbound/core/dot.conf
-opnsense/service/templates/OPNsense/Unbound/core/miscellaneous.conf
 opnsense/service/templates/OPNsense/Unbound/core/private_domains.conf
 opnsense/service/templates/OPNsense/Unbound/core/root.min.hints
 opnsense/service/templates/OPNsense/Unbound/core/unbound_dhcpd.conf
@@ -1815,7 +1825,6 @@ www/diag_authentication.php
 www/diag_backup.php
 www/diag_confbak.php
 www/diag_defaults.php
-www/diag_ipsec_leases.php
 www/diag_logs_settings.php
 www/diag_ping.php
 www/diag_testport.php
@@ -1880,7 +1889,6 @@ www/services_opendns.php
 www/services_router_advertisements.php
 www/services_unbound.php
 www/services_unbound_acls.php
-www/services_unbound_advanced.php
 www/status_dhcp_leases.php
 www/status_dhcpv6_leases.php
 www/status_habackup.php
@@ -1910,8 +1918,6 @@ www/system_usermanager_addprivs.php
 www/system_usermanager_import_ldap.php
 www/system_usermanager_passwordmg.php
 www/system_usermanager_settings_ldapacpicker.php
-www/vpn_ipsec_keys.php
-www/vpn_ipsec_keys_edit.php
 www/vpn_ipsec_mobile.php
 www/vpn_ipsec_phase1.php
 www/vpn_ipsec_phase2.php
