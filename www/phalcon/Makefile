@@ -1,6 +1,10 @@
 PORTNAME=	phalcon
 DISTVERSIONPREFIX=	v
+<<<<<<< HEAD
 DISTVERSION=	5.0.0RC2
+=======
+DISTVERSION=	5.0.2
+>>>>>>> upstream/hardenedbsd/main
 CATEGORIES=	www
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 

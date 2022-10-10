@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 TIMESTAMP = 1654788609
 SHA256 (phalcon-cphalcon-v5.0.0RC2_GH0.tar.gz) = dca77b0d0199684e303f1b42dadc7ac6455741a3392c79529bd0a6f522652bbf
 SIZE (phalcon-cphalcon-v5.0.0RC2_GH0.tar.gz) = 5230541
+=======
+TIMESTAMP = 1664785813
+SHA256 (phalcon-cphalcon-v5.0.2_GH0.tar.gz) = 570d1ce259b9f5a013ddafb96213f91d1ad572f1ef6758386bfbe2d59306838d
+SIZE (phalcon-cphalcon-v5.0.2_GH0.tar.gz) = 6094884
+>>>>>>> upstream/hardenedbsd/main
