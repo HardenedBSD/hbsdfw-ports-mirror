@@ -59,6 +59,7 @@
     SUBDIR += bchoppr-lv2
     SUBDIR += beep
     SUBDIR += beets
+    SUBDIR += bespokesynth
     SUBDIR += bharvestr-lv2
     SUBDIR += bjumblr-lv2
     SUBDIR += bliss
@@ -691,6 +692,7 @@
     SUBDIR += rnnoise
     SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
+    SUBDIR += rsgain
     SUBDIR += rsynth
     SUBDIR += rtaudio
     SUBDIR += rtmidi
