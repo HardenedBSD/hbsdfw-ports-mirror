@@ -14,7 +14,7 @@
 
 PORTNAME=	ksh93
 DISTVERSION=	93u
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	2
 CATEGORIES=	shells
 DIST_SUBDIR=	ksh93
@@ -26,9 +26,6 @@ WWW=		http://www.kornshell.com/
 LICENSE=	EPL
 
 USE_HARDENING=	pie:off relro:off
-
-BROKEN_aarch64=	Fails to compile: needs sbrk
-BROKEN_riscv64=	Fails to compile: needs sbrk
 
 USES=		compiler:c11
 
