@@ -91,11 +91,6 @@ GL_ACCOUNT= hbsdfw
 GL_PROJECT= core
 GL_COMMIT=  98c282b1216de4b28250310d4e7e89b40c22e605
 
-SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
-		src/opnsense/scripts/systemhealth/activity.py \
-		src/opnsense/scripts/systemhealth/flush_rrd.py \
-		src/opnsense/scripts/systemhealth/listReports.py
-
 MAKE_ENV+=	VERSION=${PORTVERSION}
 
 do-build:
