@@ -17,19 +17,12 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}botocore>=1.29.3<1.30.0:devel/py-botocore@${
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>0:devel/py-nose@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mock>0:devel/py-mock@${PY_FLAVOR}
 
-# Actually 2.6-2.7,3.3-3.7
-USES=		python:3.6+
-USE_GITHUB=	yes # tests missing from PyPI sdist
-USE_PYTHON=	autoplist distutils
-
-GH_ACCOUNT=	boto
+USES=		python:3.7+
+USE_PYTHON=	autoplist concurrent distutils pytest
 
 NO_ARCH=	yes
 
-# setup.py test runs integration tests which fail
-# https://github.com/boto/s3transfer/issues/41
-# Note: this is an AWS python package wide issue
-do-test:
-	@cd ${WRKSRC} && ${PYTHON_CMD} -m nose -v tests/unit tests/functional
+USE_GITHUB=	yes
+GH_ACCOUNT=	boto
 
 .include <bsd.port.mk>

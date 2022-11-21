@@ -247,6 +247,7 @@
     SUBDIR += p5-Chemistry-Reaction
     SUBDIR += p5-Chemistry-Ring
     SUBDIR += p5-Geo-BUFR
+    SUBDIR += p5-Geo-Calc
     SUBDIR += p5-Geo-Coordinates-Converter
     SUBDIR += p5-Geo-Coordinates-Converter-iArea
     SUBDIR += p5-Geo-WebService-Elevation-USGS
@@ -339,6 +340,7 @@
     SUBDIR += py-libpysal
     SUBDIR += py-lifelines
     SUBDIR += py-mdp
+    SUBDIR += py-meshio
     SUBDIR += py-mmcif
     SUBDIR += py-mmtf-python
     SUBDIR += py-molmod
@@ -350,6 +352,7 @@
     SUBDIR += py-nilearn
     SUBDIR += py-obspy
     SUBDIR += py-oddt
+    SUBDIR += py-openbabel
     SUBDIR += py-openpiv
     SUBDIR += py-paida
     SUBDIR += py-paramz
@@ -399,6 +402,7 @@
     SUBDIR += py-scimath
     SUBDIR += py-scipy
     SUBDIR += py-scoria
+    SUBDIR += py-sdf
     SUBDIR += py-segregation
     SUBDIR += py-segyio
     SUBDIR += py-sklearn-pandas
